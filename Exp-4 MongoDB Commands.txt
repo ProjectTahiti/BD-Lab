@@ -1,0 +1,14 @@
+>db.createCollection('eswar')
+>db.createCollection('Random')
+>show dbs
+>show collections
+>db.Random.drop()
+>show collections
+>db.eswar.insert({"Name" : "Eswar", "Age" : 20, "Address" : { "DoorNo" : 24, "Street" : "rkcolony", "City" : "Chennai", "State" : "TamilNadu", "Pincode" : 600119 }, "College" : "Sathyabama"})
+>db.eswar.insert([{"Name" : "Harish", "Age" : 20, "Address" : { "DoorNo" : 20/201, "Street" : "iob colony", "City" : "Chennai", "State" : "Tamilnadu", "Pincode" : 600119 }, "College" : "Sathyabama"},{ "Name" : "Yogesh", "Age" : 20, "Address" : { "DoorNo" : 13/456, "Street" : "pk puram", "City" : "Chennai", "State" : "TamilNadu", "Pincode" : 600119 }, "College" : "Sathyabama"},{ "Name" : "Mugunth", "Age" : 20, "Address" : { "DoorNo" : 11, "Street" : "krishna nagar", "City" : "Chennai", "State" : "TamilNadu", "Pincode" : 600119 }, "College" : "Sathyabama"},{"Name" : "Kishan", "Age" : 19, "Address" : { "DoorNo" : 12, "Street" : "deepika colony", "City" : "Chennai", "State" : "TamilNadu", "Pincode" : 600119 }, "College" : "Sathyabama"}])
+>db.eswar.find().pretty()
+>db.eswar.find({Age:{$lte:19}})
+>db.eswar.find({Age:{$lte:19}},{Name:1,Age:1,_id:0})
+>db.eswar.find({Age:{$gte:20}},{Name:1,Age:1,_id:0})
+>db.eswar.update({'Name':'Eswar'},{$set:{'Name':'Shashank'}})
+>db.eswar.remove({'Name' : 'Mugunth'}
